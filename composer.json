@@ -16,8 +16,7 @@
         "php": ">=5.3.2"
     },
     "autoload": {
-        "psr-0": { "UKHomeOffice\\GovUKFTBundle": "" }
+        "psr-0": { "UKHomeOffice\\Bundle\\GovUKFTBundle": "" }
     },
-    "target-dir": "UKHomeOggice/GovUKFTBundle",
     "minimum-stability": "dev"
 }
