@@ -10,7 +10,7 @@
             "type": "vcs",
             "url": "https://github.com/alphagov/govuk_frontend_toolkit.git"
         }
-    ]
+    ],
     "authors": [
         {
             "name": "Mike Whiting",
