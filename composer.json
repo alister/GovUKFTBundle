@@ -17,6 +17,5 @@
     },
     "autoload": {
         "psr-0": { "UKHomeOffice\\Bundle\\GovUKFTBundle": "" }
-    },
-    "target-dir": "UKHomeOffice/Bundle/GovUKFTBundle"
+    }
 }

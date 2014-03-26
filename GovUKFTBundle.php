@@ -1,7 +1,7 @@
 <?php
 
 
-namespace UKHomeOffice\Bundle;
+namespace UKHomeOffice\Bundle\GovUKTBundle;
 
 class GovUKFTBundle
 {
