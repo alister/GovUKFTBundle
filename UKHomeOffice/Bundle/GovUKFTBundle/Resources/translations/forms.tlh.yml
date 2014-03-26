@@ -1,0 +1,29 @@
+#-- Klingon - or otherwise fake text
+where_is_the_bathroom: nuqDaq 'oH puchpa''e'
+
+form:
+    button:
+        start:  lojmIt yIpoSmoH!
+        next:   "HIja'"
+        back:   "ghobe'"
+        finish: "majQa'"
+    status:
+        question:   "qaStaH nuq?"
+        lost:           "jIyajbe'"
+        stolen:         "naDevvo' yIghoS"
+
+
+# lu' or luq
+# No, don't, I won't. Qo'
+# Hello. (Roughly, "What do you want?")   nuqneH
+# What's happening?
+# Huh?    nuqjatlh?
+# I understand.   jIyaj
+# I don't understand.
+# Good! (expression of satisfaction)  maj
+# Well done!  majQa'
+# Where is the bathroom?  nuqDaq 'oH puchpa''e'
+# Come in yI'el (to more than one person: pe'el)
+#  (to more than one person: naDevvo' peghoS)
+# Open the door!  lojmIt yIpoSmoH! (See note if you think something is missing here.)
+#        damaged_other:  HIghoS

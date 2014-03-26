@@ -3,7 +3,6 @@
 USAGE!
 
 In composer.json:
-
 {
     "repositories": [       
         {
@@ -23,25 +22,26 @@ In composer.json:
 
 
 In app/AppKernel.php:
-
 Add to bundle => "new UKHomeOffice\Bundle\GovUKFTBundle\GovUKFTBundle()"
 
 
 Add route resource to app/config/routing.yml (for testing purposes):
-
 govukft:
     resource: "@GovUKFTBundle/Resources/config/routing.yml"
     prefix:   /govukft
 
 
 Add bundle to assetic bundle list in config.yml:
-
 # Assetic Configuration
 assetic:
     bundles:        [ GovUKFTBundle ]
 
 
+Add the bundle config service to the imports section of
+app/config/config.yml:
+- { resource: "@GovUKFTBundle/Resources/config/services.yml" }
+
+
 Enable translations by uncommenting the following line
-in the main app/config/config.yml
-
-
+in the main app/config/config.yml:
+   translator:      { fallback: "%locale%" }

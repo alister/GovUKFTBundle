@@ -1,0 +1,80 @@
+# title and text on the 'front page'
+page.start:
+    title:               "Report a lost or stolen passport"
+    intro:               >
+                         <p>You must tell Her Majesty’s Passport Office  as soon as possible if your passport has
+                         been lost or stolen.</p>
+                         <p>This will reduce the risk of anyone else using your passport or your identity.</p>
+
+    Startnow:            "Start now @todo"
+page.contact:
+    title:               "TITLE @todo"
+    content:             >
+                         <p>In order to handle your report as quickly as possible, we will need
+                         to contact you by telephone to confirm some information.</p>
+                         <p>We aim to call within 4 hours of recieving your report. You can
+                         expect our call between 9:00am and 4:00pm Monday to Friday..</p>
+
+    why_email:
+        header:          "Why are you asking for my email address?"
+        body:            >
+                         <p>We ask for an email address because we will keep you up-to-date with you report.</p>
+                         <p>We do not keep a record of email addresses after reports have been taken care of.</p>
+
+page.confirm:
+    title:               "Reporting your passport lost"
+    content:             >
+                         <p>Check your answers before sending your report.</p>
+
+    passport_holder:     "Passport Holder"
+    contact_details:     "Contact details"
+    details_on_passport: "Details on passport"
+    date_of_birth:       "Date of birth"
+    place_of_birth:      "Place of birth"
+    the_passport_was:    "The passport was"
+    declaration:
+        header:          >
+                         I understand that:
+
+        content:         >
+                         <ul>
+                         <li>The information I provide here will be used to report the passport lost.</li>
+                         <li>The passport I am reporting will be cancelled when the Passport Office confirm by
+                         telephone.</li>
+                         <li>The passport cannot be used after it is cancelled.</li>
+                         </ul>
+
+page.completed:
+    title:               "You have reported a lost or stolen passport"
+    intro:               >
+                         <p>Will will call you as soon as we are able to, to confirm the
+                         details and cancel the passport(s) you have told us about.</p>
+                         <p>Thanks!</p>
+
+    done:                "Return to gov.uk"
+    url:                 "//www.gov.uk/report-a-lost-or-stolen-passport"
+
+page.holder_other:
+    title:               "Someone elses passport @todo"
+    content:             >
+                         <h1>Sorry, You can't use this form.</h1>
+                         <h2>it's just for adults looking after themselves right now </h2>
+                         <p>@todo</p>
+
+page.holder_child:
+    title:               "A child passport @todo"
+    content:             >
+                         <h1>Sorry, You can't use this form yet for children.</h1>
+                         <h2>it's just for adults looking after themselves right now </h2>
+                         <p>@todo</p>
+
+page.details:
+    day:                 "Day"
+    month:               "Month"
+    year:                "Year"
+
+page.general:
+    error_title:         "There was a problem submitting the form"
+    error_content:       "Please try the following:"
+    step_step:           "Step"
+    step_of:             "of"

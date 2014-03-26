@@ -1,0 +1,98 @@
+# validators.en.yml
+# Messages after validations fail
+# @todo also break down by section??
+
+holder:
+    choice:             "The only available choices are Myself, My Child/Children, or Someone else"
+
+telephone:
+    not_blank:          "Telephone number is required"
+    invalid_format:     "Telephone number can only contain numbers, spaces  and +()-"
+    too_long:           "Telephone number should be no longer than {{ limit }} characters"
+
+telephone2:
+    invalid_format:     "Alternative telephone number can only contain numbers, spaces  and +()-"
+    too_long:           "Alternative telephone number should be no longer than {{ limit }} characters"
+
+email:
+    required:           "Email address is required"
+    not_valid:          "The email '{{ value }}' is not a valid email."
+    fields_must.match:  "Email fields must match"
+
+title:
+    minlength:          "Your title must be at least {{ limit }} characters @todo"
+    maxlength:          "Your title cannot be longer than {{ limit }} characters @todo"
+
+surname:
+    not_blank:          "Surname must be entered"
+    too_long:           "Surname should be no longer than {{ limit }} characters"
+    invalid_format:     "Surname can only contain letters, spaces and -'"
+
+forenames:
+    not_blank:          "Forename(s) must be entered"
+    invalid_format:     "Forenames can only contain letters, spaces and -'"
+    too_long:           "Forenames should be no longer than {{ limit }} characters"
+
+sex:
+    not_blank:          "Sex must be selected"
+    choice:             "Invalid sex choice"
+
+lostOrStolen:
+    choice:             "The only choices are Lost, or Stolen"
+
+townOfBirth:
+    not_blank:          "Town of birth must not be blank"
+    too_long:           "Town of birth should be no longer than {{ limit }} characters"
+    invalid_format:     "Town of birth can only contain letters, numbers, spaces and ,-'&./"
+countryOfBirth:
+    not_blank:          "Country of birth must be selected"
+    too_long:           "Country of birth is too long"
+    invalid_format:     "Country of birth can only contain letters, numbers, spaces and ,-'&./()"
+    not_exist:          "Please select a country from the list"
+
+dob:
+    not_blank:          "Date of birth must be entered"
+    too_young:          "You must be over 16 to report your passport lost or stolen"
+issuedinuk:
+    not_blank:          "issuedinuk must be chosen  @todo"
+detailsdifferent:
+    not_blank:          "Have your details changed since getting your passport?"
+differenttitle:
+    not_blank:          "differenttitle must not be blank  @todo"
+    too_long:           "differenttitle is too long. It should have no more than {{ limit }} characters @todo"
+differentsurname:
+    not_blank:          "differentsurname must not be blank  @todo"
+    too_long:           "differenttitle is too long. It should have no more than {{ limit }} characters @todo"
+differentforenames:
+    not_blank:          "differentforenames must not be blank  @todo"
+    too_long:           "differenttitle is too long. It should have no more than {{ limit }} characters @todo"
+passportNumber:
+    invalid_format:     "Passport number can only contain numbers"
+
+circ:
+    lostorstolen:
+        lost_or_stolen:  "Please select either lost or stolen"
+        reason_lost:     "Please select a reason for your lost passport"
+        reason_stolen:   "Please select a reason for your stolen passport"
+    where:
+        required:       "Please enter where the passport was lost/stolen"
+        invalid_format: "Place of loss can only contain letters, numbers, spaces and ,-'&./"
+        too_long:       "Place of loss should be no longer than {{ limit }} characters"
+    when:
+        required:       "Please enter the date you last saw your passport"
+        valid:          "Please enter a valid date"
+        not_in_future:  "Where was it last seen date cannot be in the future"
+    notes:
+        too_long:       "@todo - notes - too long"
+    country:
+        required:       "Please enter the country where you lost your passport"
+        too_long:       "Country of loss should be no longer than {{ limit }} characters"
+        not_exist:      "Please select a country from the list"
+
+declaration:
+    agreed:
+        required:       "MUST AGREE @todo"
+    name:
+        required:       "DECLARATION NAME REQUIRED @todo"
+    date:
+        required:       "DECLARATION DATE REQUIRED @todo"

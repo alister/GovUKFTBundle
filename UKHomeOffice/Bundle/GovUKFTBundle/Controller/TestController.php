@@ -13,6 +13,10 @@ class TestController extends Controller
     public function indexAction()
     {
 
+    	$config = $this->get('ft_config');
+    	
+
+
     	$vars = array(
     		'name' => 'Foo'
     	);

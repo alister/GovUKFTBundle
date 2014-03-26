@@ -1,0 +1,95 @@
+# field labels are in messages._LOCALE.yml
+
+form:
+    button:
+        next:                    "Continue"
+        back:                    "back"
+        finish:                  "Finish"
+
+    section:
+        status:                  "status"
+        owner:                   "owner"
+        current:                 "current"
+        #--
+        confirmation:            "confirmation"
+
+    # field headers/questions and options (radio buttons, etc)
+    passportHolder:
+        label:                   "The lost passport belongs to:"
+        me:                      "Myself"
+        child:                   "My child / children"
+        other:                   "Someone else"
+
+    # Passport details page
+    passportTitle:               "Title"
+    passportSurname:             "Surname on passport"
+    passportForenames:           "Forename(s) on passport"
+    sex:
+        label:                   "Sex"
+        male:                    "Male"
+        female:                  "Female"
+        unspecified:             "Unspecified"
+    passportDateOfBirth:         "Date of birth"
+    passportTownOfBirth:         "Town of birth"
+    passportCountryOfBirth:
+        label:                   "Country of birth"
+    passportIsBornUk:
+        label:                   "Were you born in the United Kingdom?"
+        uk:                      "Born in the UK"
+        nonUK:                   'Born outside the UK'
+    passportNumber:
+        label:                   "Passport number (optional)"
+    passportIssuedUk:
+        label:                   "Was the passport issued in the UK?"
+        uk:                      "In the UK"
+        nonUk:                   "Outside the UK"
+    passportIssuedDate:          "Date of issue (if available)"
+    currentDetailsDifferent:
+        label:                   "Are your current details different to those on the passport?"
+        different:               "My details have changed"
+        same:                    "Same details as my passport"
+
+    currentTitle:                "Current title"
+    currentSurname:              "Current Surname"
+    currentForenames:            "Current Forename(s)"
+
+    # Circumstances (lost/stolen)
+    circs:
+        question:                "My passport has been"
+        lost:                    "Lost"
+        stolen:                  "Stolen"
+        where:                   "Where was it last seen?"
+        when:                    "When was it last seen?"
+        notes:                   "Additional notes (optional)"
+        country:
+            label:               "Country of loss"
+        lostReasons:
+            label:               "Reason for your lost passport"
+            empty_value:         "Please select..."
+        stolenReasons:
+            label:               "Reason for your stolen passport"
+            empty_value:         "Please select..."
+
+    contact:
+        telephone:
+            first:
+                label:           "Telephone number"
+            alt:
+                label:           "Alternative telephone number (optional)"
+        email:
+            label:               "false"
+            first:               "Email address"
+            repeat:              "Confirm email address"
+            fields_must:
+                match:           "Email address fields must match"
+
+ls01:
+    flow_step:
+        passport_holder:         "passport holder"
+        passport_holder_other:   "holder other"
+        passport_details:        "passport details"
+        parental_responsibility: "parental responsibility"
+        contact_details:         "contact details"
+        circumstances:           "circumstances"
+        declaration:             "declaration"
+        confirmation:            "confirmation"

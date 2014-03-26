@@ -1,13 +1,17 @@
 <?php
 
-namespace UKHomeOffice\Bundle\GoveUKFTBundle;
+namespace UKHomeOffice\Bundle\GovUKFTBundle;
 
 class Config
 {
+    public $param;
 
-  public function __construct()
-  {
-    echo 'this is the config class.';
-  }
 
+
+    public function __construct($param)
+    {
+        $this->param = $param;
+        //echo 'this is the config class.';
+        print_r($this);
+    }
 }
