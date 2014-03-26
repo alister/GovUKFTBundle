@@ -1,0 +1,6 @@
+
+
+ft_test:
+    pattern:  /testing
+    defaults: { _controller: GovUKFTBundle:Test:index }
+
