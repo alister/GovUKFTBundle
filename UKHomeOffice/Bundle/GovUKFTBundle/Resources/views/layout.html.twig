@@ -2,8 +2,8 @@
 {% block head %}
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
-    {% include 'HmpoGDSThemeBundle::gds-css-headers.html.twig' %}
-    {% include 'HmpoGDSThemeBundle::gds-analytics.html.twig' %}
+    {% include 'GovUKFTBundle::gds-css-headers.html.twig' %}
+    {% include 'GovUKFTBundle::gds-analytics.html.twig' %}
 
     <title>{{ block('title') }} - GOV.UK</title>
 
@@ -11,7 +11,7 @@
     {# @todo where should these files live - all remote, or as part of local assets? #}
     {% stylesheets
         '@CraueFormFlowBundle/Resources/assets/css/buttons.css'
-        '@HmpoLso1Bundle/Resources/public/css/enhancement.css'
+        '@GovUKFTBundle/Resources/public/css/enhancement.css'
     %}
         <link type="text/css" rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
@@ -20,7 +20,7 @@
 {% endblock %}
 
 <body class="mainstream">
-    {% include 'HmpoGDSThemeBundle::gds-body-header.html.twig' %}
+    {% include 'GovUKFTBundle::gds-body-header.html.twig' %}
 
     <div id="alphaMessage">
         <p>This website is in <strong>ALPHA</strong> and all content is subject to change.</p>
@@ -59,12 +59,12 @@
             </div>
         </article>
     </div>
-{% include 'HmpoGDSThemeBundle::gds-meta.html.twig' %}
+{% include 'GovUKFTBundle::gds-meta.html.twig' %}
 
 </main>
 
-    {% include 'HmpoGDSThemeBundle::gds-related.html.twig' %}
-    {% include 'HmpoGDSThemeBundle::gds-body-footer.html.twig' %}
+    {% include 'GovUKFTBundle::gds-related.html.twig' %}
+    {% include 'GovUKFTBundle::gds-body-footer.html.twig' %}
 
 <div id="global-app-error" class="app-error hidden"></div>
 
