@@ -18,5 +18,5 @@
     "autoload": {
         "psr-0": { "UKHomeOffice\\Bundle\\GovUKFTBundle": "" }
     },
-    "minimum-stability": "dev"
+    "target-dir": "UKHomeOffice/Bundle/GovUKFTBundle"
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace UKHomeOffice\GoveUKFTBundle;
+namespace UKHomeOffice\Bundle\GoveUKFTBundle;
 
 class Config
 {
