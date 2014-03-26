@@ -22,16 +22,26 @@ In composer.json:
 }
 
 
+In app/AppKernel.php:
+
+Add to bundle => "new UKHomeOffice\Bundle\GovUKFTBundle\GovUKFTBundle()"
+
 
 Add route resource to app/config/routing.yml (for testing purposes):
 
 govukft:
-     resource: "@GovUKFTBundle/Resources/config/routing.yml"
-     prefix:   /govukft
+    resource: "@GovUKFTBundle/Resources/config/routing.yml"
+    prefix:   /govukft
 
 
+Add bundle to assetic bundle list in config.yml:
 
-In app/AppKernel.php:
+# Assetic Configuration
+assetic:
+    bundles:        [ GovUKFTBundle ]
 
-Add to bundle => "new UKHomeOffice\Bundle\GovUKFTBundle\GovUKFTBundle()"
+
+Enable translations by uncommenting the following line
+in the main app/config/config.yml
+
 

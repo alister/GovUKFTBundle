@@ -1,6 +1,8 @@
-{#% extends "TwigBundle::layout.html.twig" %#}
 {% block head %}
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
     <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
     {% include 'GovUKFTBundle::gds-css-headers.html.twig' %}
     {% include 'GovUKFTBundle::gds-analytics.html.twig' %}
@@ -9,8 +11,7 @@
 
     <meta name="description" content="Find out what you need to do if your passport has been If you need to travel urgently, you may be able to get an [emergency travel document](/emergency-travel-document) from the Embassy, High Commission or Consulate. You will have to pay a fee. or stolen and how to get a replacement">
     {# @todo where should these files live - all remote, or as part of local assets? #}
-    {% stylesheets
-        '@CraueFormFlowBundle/Resources/assets/css/buttons.css'
+    {% stylesheets        
         '@GovUKFTBundle/Resources/public/css/enhancement.css'
     %}
         <link type="text/css" rel="stylesheet" href="{{ asset_url }}" />
@@ -38,35 +39,44 @@
 
 
 {% block body %}
-<main id="content" role="main"><div id="js-replaceable">
+<main id="content" role="main">
 
-    <header class="page-header group"><div>
-        <h1>{{ block('title') }}</h1>
-      </div>
-    </header>
+    <div id="js-replaceable">
 
-    <div class="article-container group">
+        <header class="page-header group"><div>
+            <h1>{{ block('title') }}</h1>
+          </div>
+        </header>
 
-        {% for flashMessage in app.session.flashbag.get('notice') %}
-            <div class="flash-message">
-                <em>Notice</em>: {{ flashMessage }}
-            </div>
-        {% endfor %}
+        <div class="article-container group">
 
-        <article role="article" class="group">
-            <div class="inner">
-                {% block content %}{% endblock %}
-            </div>
-        </article>
+            {% for flashMessage in app.session.flashbag.get('notice') %}
+                <div class="flash-message">
+                    <em>Notice</em>: {{ flashMessage }}
+                </div>
+            {% endfor %}
+
+            <article role="article" class="group">
+                <div class="inner">
+                    {% block content %}{% endblock %}
+                </div>
+            </article>
+        </div>
     </div>
+
 {% include 'GovUKFTBundle::gds-meta.html.twig' %}
 
 </main>
 
-    {% include 'GovUKFTBundle::gds-related.html.twig' %}
-    {% include 'GovUKFTBundle::gds-body-footer.html.twig' %}
+{% include 'GovUKFTBundle::gds-related.html.twig' %} 
+
+</div><!-- end wrapper -->
+
+{% include 'GovUKFTBundle::gds-body-footer.html.twig' %} 
 
 <div id="global-app-error" class="app-error hidden"></div>
+
+
 
 {% endblock %}
 
