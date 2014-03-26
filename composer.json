@@ -1,14 +1,14 @@
 {
-    "name": "UKHomeOffice/GovUKFTBundle",
+    "name": "ukhomeoffice/govukftbundle",
     "type": "symfony-bundle",
-    "description": "Symfony Bundle for alphagov/govuk_frontend_toolkit!",
+    "description": "Symfony 2 bundle for using alphagov/govuk_frontend_toolkit.",
     "keywords": [""],
     "homepage": "https://github.com/UKHomeOffice/GovUKFTBundle",
     "license": "",
     "repositories": [
         {
-            "type": "vcs",
-            "url": "https://github.com/alphagov/govuk_frontend_toolkit.git"
+            "type": "composer",
+            "url": "https://govuk-frontend-toolkit.appspot.com"
         }
     ],
     "authors": [
