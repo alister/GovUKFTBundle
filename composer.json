@@ -5,6 +5,12 @@
     "keywords": [""],
     "homepage": "https://github.com/UKHomeOffice/GovUKFTBundle",
     "license": "",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/alphagov/govuk_frontend_toolkit.git"
+        }
+    ]
     "authors": [
         {
             "name": "Mike Whiting",
@@ -14,7 +20,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.2",
-        "symfony/framework-bundle": "~2.1"
+        "alphagov/govuk_frontend_toolkit": "dev-master"
     },
     "autoload": {
         "psr-0": { "UKHomeOffice\\GovUKFTBundle": "" }
