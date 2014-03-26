@@ -1,0 +1,23 @@
+{
+    "name": "UKHomeOffice/GovUKFTBundle",
+    "type": "symfony-bundle",
+    "description": "Symfony Bundle for alphagov/govuk_frontend_toolkit!",
+    "keywords": [""],
+    "homepage": "https://github.com/UKHomeOffice/GovUKFTBundle",
+    "license": "",
+    "authors": [
+        {
+            "name": "Mike Whiting",
+            "email": "mike.whiting@transformuk.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": "~2.1"
+    },
+    "autoload": {
+        "psr-0": { "UKHomeOffice\\GovUKFTBundle": "" }
+    },
+    "target-dir": "UKHomeOggice/GovUKFTBundle"
+}
