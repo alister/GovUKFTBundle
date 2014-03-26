@@ -1,0 +1,256 @@
+@import '../../../../../../../web/components/govuk_frontend_toolkit/stylesheets/_colours';
+@import '../../../../../../../web/components/govuk_frontend_toolkit/stylesheets/_css3';
+@import '../../../../../../../web/components/govuk_frontend_toolkit/stylesheets/_measurements';
+@import '../../../../../../../web/components/govuk_frontend_toolkit/stylesheets/_typography';
+@import '../../../../../../../web/components/govuk_frontend_toolkit/stylesheets/design-patterns/_alpha-beta';
+
+dt {
+	margin-top: 20px;
+}
+
+fieldset dd {
+	margin-left: 0;
+}
+
+#steps, form ul {
+	list-style-type: none;
+	list-style-image: none;
+	padding-left: 0;
+}
+
+form ul li {
+	list-style-type: inherit;
+	list-style-image: inherit;
+	margin: 0.5em 0 0 0;
+	padding-left: 0;
+}
+
+legend {
+	@include core-24;
+	margin-bottom: 0.5em;
+}
+
+#validationSummary {
+	border: 3px solid $mellow-red;
+	padding: 1em;
+	background-color: #fef7f7;
+}
+
+.formErrorMessages {
+	padding-top: 0;
+}
+
+#validationSummary li, .formErrorMessages li {
+	color: $mellow-red;
+	padding-left: 0;
+	@include core-16;
+}
+
+#validationSummary h1 {
+	margin: 0;
+}
+
+#validationSummary ul {
+	margin-bottom: 0;
+}
+
+#validationSummary a {
+	color: inherit;
+	text-decoration: none;
+}
+
+#validationSummary a:hover {
+	text-decoration: underline;
+}
+
+ul[id^="ReportType"] {
+	margin-bottom: 30px;
+}
+
+ul[id^="ReportType"] li {
+	border: 1px solid $border-colour;
+	background-color: $panel-colour;
+	padding: 15px 0;
+	margin-top: 10px;
+	width: 50%;
+}
+
+ul[id^="ReportType"] li input {
+	margin-left: 10px;
+}
+
+ul[id^="ReportType"] li:first-of-type {
+	margin-top: 0;
+}
+
+ul[id^="ReportType"] label {
+	margin-left: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+textarea,
+select {
+	font-size: 16px;
+	line-height: 1.25;
+	font-weight: 300;
+	border: 2px inset;
+	width: 50%;
+	padding: 0.25em;
+	margin: auto;
+	background-color: #f9f9f9;
+}
+
+select {
+	border: 1px solid $border-colour;
+}
+
+#whyAskEmailHeader {
+	display: block;
+	margin-top: 40px;
+	background: url(/images/arrow-right.png) no-repeat 0.5% 50%;
+	padding-left: 1em;
+}
+
+#whyAskEmailBody {
+	border-left: 5px solid $grey-3;
+	padding-left: 15px;
+}
+
+#confirmDetails li {
+	overflow: hidden;
+	border-top: 1px solid $border-colour;
+	margin: 0;
+	padding: 10px 0;
+}
+
+#confirmDetails li:last-of-type {
+	border-bottom: 1px solid $border-colour;
+}
+
+#confirmDetails .noBorder {
+	border: 0;
+}
+
+#confirmDetails li p {
+	float: left;
+	width: 35%;
+}
+#confirmDetails li p:last-of-type {
+	width: 50%;
+}
+#confirmDetails li p:first-of-type {
+	color: $secondary-text-colour;
+}
+
+#confirmDetails li a {
+	float: right;
+	border: 1px solid $border-colour;
+	background-color: $panel-colour;
+	text-decoration: none;
+	color: $text-colour;
+	padding: 5px;
+	@include core-14;
+}
+
+#step {
+	@include core-16;
+	color: $grey-1;
+	margin: 0 0 2em 0;
+}
+
+#alphaMessage {
+	@include phase-banner;
+}
+
+.twitter-typeahead {
+	width: 50%;
+}
+
+.twitter-typeahead input, .twitter-typeahead .tt-dropdown-menu {
+	width: 100%;
+}
+
+.twitter-typeahead .tt-dropdown-menu {
+	background-color: $white;
+	border: 1px solid $border-colour;
+	padding: 0;
+	@include border-radius(4px);
+	@include box-shadow(0 6px 12px rgba(0, 0, 0, 0.175));
+}
+
+.twitter-typeahead .tt-suggestion > p {
+	padding: 3px 5px;
+}
+
+.twitter-typeahead .tt-suggestion > p:hover,
+.tt-suggestion.tt-is-under-cursor > p {
+	color: $black;
+	background-color: $panel-colour;
+}
+
+#formFields > li {
+	margin-top: 0.5em;
+}
+
+.choice li {
+	margin-top: 0.75em;
+	background-color: $grey-3;
+	width: 50%;
+}
+
+#formFields label {
+	display: block;
+	margin-bottom: 0.25em;
+	padding-top: 0.75em;
+}
+
+.step1 #formFields > li > label {
+	left: -9999px;
+	position: absolute;
+}
+
+#formFields .choice label {
+	padding: 1em;
+}
+
+#formFields .choice label input {
+	margin-right: 0.5em;
+	vertical-align: 0.25em;
+}
+
+#formFields .formError {
+	border-width: 0 0 0 3px;
+	border-style: solid;
+	border-color: $mellow-red;
+	padding: 1em;
+	background-color: #fef7f7;
+}
+
+.button {
+	background-color: $green;
+	padding: 0.35em 0.5em 0.15em;
+	@include border-radius(0.25em);
+	@include core-19;
+	margin-top: 1em;
+}
+
+.datePart {
+	display: inline-block;
+	width: 14%;
+	margin: 0.5em 1em 0.5em 0;
+	min-width: 1em;
+}
+
+.datePart span {
+	color: $grey-1;
+}
+
+input[id$="_day"],
+input[id$="_month"],
+input[id$="_year"] {
+	width: 100%;
+	min-width: 1em;
+}
