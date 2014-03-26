@@ -1,1 +1,58 @@
-Hello {{ name }}!
+{% extends "GovUKFTBundle::layout.html.twig" %}
+
+{#
+Translations for this file are in src/Hmpo/Bundle/Lso1Bundle/Resources/translations/messages.en.yml
+@SEE: http://stackoverflow.com/a/9880877/6216
+
+eg:
+        'page.start.intro'
+    is in the translation file:
+        page.start:
+            intro: >
+                <p>....HTML markup text....
+                text, text, text, text, text,
+                text, text, text, text, text</p>
+
+            # and more text
+            Startnow: Start now
+#}
+
+{% block title %}{{ 'page.start.title'|trans|raw }}{% endblock %}
+
+{% block content %}
+<div class="intro">
+
+    {# required to be 'raw' as it will have some simple HTML markup #}
+    {{ 'page.start.intro'|trans|raw }}
+    {# Could also do something with GDSMarkdown format ? #}
+
+{% if app.environment == 'dev' %}
+    <h1>you are running in the DEV environment</h1>
+    <p>This page would (according to the GDS guidlines), auto-redirect (on a 301), to <a href="https://www.gov.uk/report-a-lost-or-stolen-passport">https://www.gov.uk/report-a-lost-or-stolen-passport</a>.</p>
+
+    <p>You will also need to be able to <a href="{{ path('fos_user_security_login') }}">LOGIN</a> as well to get to <a href="{{ path('hmpo_admin_homepage') }}">ADMIN</a>.</p>
+
+    <p>this [dev] block is not translated. The rest is in src/Hmpo/Bundle/Lso1Bundle/Resources/translations/messages.en.yml</p>
+{% endif %}
+
+<p class="get-started">
+  <a id="startForm" rel="nofollow" href="{{ path('lso1_start') }}" class="big button">{{ 'page.start.Startnow'|trans }}</a>
+</p>
+
+</div>
+
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+{% endblock %}
