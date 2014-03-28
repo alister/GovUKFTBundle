@@ -9,7 +9,7 @@ Make use of the Gov UK frontend toolkit with your Symfony 2 project. See
 [github.com/alphagov/govuk_frontend_toolkit](https://github.com/alphagov/govuk_frontend_toolkit).
 
 
-**USAGE!**
+**Setup...**
 
 **In composer.json**
 
