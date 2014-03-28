@@ -1,27 +1,24 @@
 
 
-WORK IN PROGRESS!
------------------
+**WORK IN PROGRESS!**
 
 UKHomeOffice/Bundle/GovUKFTBundle
-==========================
+---------------------------------
 
 Make use of the Gov UK frontend toolkit with your Symfony 2 project. See
 [github.com/alphagov/govuk_frontend_toolkit](https://github.com/alphagov/govuk_frontend_toolkit).
 
 
-USAGE!
-------
+**USAGE!**
 
-In composer.json
-----------------
+**In composer.json**
 
     {
         "repositories": [       
             {
                 "type": "vcs",
                 "url": "https://github.com/mikejw/GovUKFTBundle.git"
-            },
+            },                    
             {
                 "type": "composer",
                 "url": "https://govuk-frontend-toolkit.appspot.com"
@@ -33,9 +30,12 @@ In composer.json
         }
     }
 
+**Run composer update**
 
-In app/AppKernel.php add the bundle
------------------------------------
+    composer update
+
+
+**In app/AppKernel.php add the bundle**
 
     $bundles = array(
 
@@ -44,33 +44,29 @@ In app/AppKernel.php add the bundle
     );
 
 
-Add route resource to app/config/routing.yml (for testing)
-----------------------------------------------------------
+**Add route resource to app/config/routing.yml (for testing)**
 
-    govukft:
+    gov_ukft:
         resource: "@GovUKFTBundle/Resources/config/routing.yml"
         prefix:   /govukft
 
 
-Add the bundle extension config to app/config/config.yml 
---------------------------------------------------------
+**Add the bundle extension config to app/config/config.yml**
 
     gov_ukft:
         enabled: true
         title: Foo
         theme: global
 
-
-
-<!--
-Add bundle to assetic bundle list in config.yml
------------------------------------------------
+**Add bundle to assetic bundle list in app/config/config.yml**
 
     # Assetic Configuration
     assetic:
         bundles:        [ GovUKFTBundle ]
 
 
+
+<!--
 Enable translations by uncommenting in app/config/config.yml
 ------------------------------------------------------------
 
