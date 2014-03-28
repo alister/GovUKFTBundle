@@ -73,6 +73,13 @@ Make use of the Gov UK frontend toolkit with your Symfony 2 project. See
         bundles:        [ GovUKFTBundle ]
 
 
+**Install sass ruby gem and add sass config to app/config/config.yml**
+
+    assetic:
+        filters:
+            sass:
+                bin: /usr/local/bin/sass
+
 
 Test the theme at http://.../app_dev.php/govukft/testing
 

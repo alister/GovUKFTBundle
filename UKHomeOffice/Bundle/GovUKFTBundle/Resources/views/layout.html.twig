@@ -11,11 +11,12 @@
 
     <meta name="description" content="Find out what you need to do if your passport has been If you need to travel urgently, you may be able to get an [emergency travel document](/emergency-travel-document) from the Embassy, High Commission or Consulate. You will have to pay a fee. or stolen and how to get a replacement">
     {# @todo where should these files live - all remote, or as part of local assets? #}
-    {% stylesheets        
-        '@GovUKFTBundle/Resources/public/css/enhancement.css'
-    %}
-        <link type="text/css" rel="stylesheet" href="{{ asset_url }}" />
+
+    {% stylesheets 'bundles/govukft/css/enhancement.scss' filter='sass' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
+
+
     <link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/jquery.prettycheckable/1.2/prettyCheckable.css" />
     <link type="text/css" rel="stylesheet" href="https://raw.github.com/bassjobsen/typeahead.js-bootstrap-css/master/typeaheadjs.css" />
 {% endblock %}
