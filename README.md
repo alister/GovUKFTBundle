@@ -30,6 +30,14 @@ Make use of the Gov UK frontend toolkit with your Symfony 2 project. See
         }
     }
 
+**Add extra options to config block in composer.json**
+
+    "config": {        
+        "component-dir": "web/components",
+        "component-baseurl": "/components"
+    }
+
+
 **Run composer update**
 
     composer update
@@ -63,6 +71,7 @@ Make use of the Gov UK frontend toolkit with your Symfony 2 project. See
     # Assetic Configuration
     assetic:
         bundles:        [ GovUKFTBundle ]
+
 
 
 Test the theme at http://.../app_dev.php/govukft/testing
