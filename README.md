@@ -65,6 +65,8 @@ Make use of the Gov UK frontend toolkit with your Symfony 2 project. See
         bundles:        [ GovUKFTBundle ]
 
 
+Test the theme at http://.../app_dev.php/govukft/testing
+
 
 <!--
 Enable translations by uncommenting in app/config/config.yml
