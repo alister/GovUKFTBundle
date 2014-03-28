@@ -1,0 +1,18 @@
+
+
+parameters:
+    ft_config.enabled:  false # gets overridden
+    ft_config.class:    UKHomeOffice\Bundle\GovUKFTBundle\Config
+    ft_config.title:    "Report me a lost or stolen passport"
+    ft_config.theme:    global
+    
+
+
+services:
+    ft_config:
+        class:          "%ft_config.class%"
+        arguments:
+          - "%ft_config.title%"
+          - "%ft_config.theme%"
+
+

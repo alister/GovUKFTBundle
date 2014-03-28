@@ -1,47 +1,78 @@
 
 
+WORK IN PROGRESS!
+-----------------
+
+UKHomeOffice/Bundle/GovUKFTBundle
+==========================
+
+Make use of the Gov UK frontend toolkit with your Symfony 2 project. See
+[github.com/alphagov/govuk_frontend_toolkit](https://github.com/alphagov/govuk_frontend_toolkit).
+
+
 USAGE!
+------
 
-In composer.json:
-{
-    "repositories": [       
-        {
-            "type": "vcs",
-            "url": "ssh://mike@ai-em.net/var/git/govukft_bundle.git"
-        },
-        {
-            "type": "composer",
-            "url": "https://govuk-frontend-toolkit.appspot.com"
+In composer.json
+----------------
+
+    {
+        "repositories": [       
+            {
+                "type": "vcs",
+                "url": "ssh://mike@ai-em.net/var/git/govukft_bundle.git"
+            },
+            {
+                "type": "composer",
+                "url": "https://govuk-frontend-toolkit.appspot.com"
+            }
+        ],
+        "require": {
+            "alphagov/govuk_frontend_toolkit": "dev-master",
+            "ukhomeoffice/govukftbundle": "dev-master"
         }
-    ],
-    "require": {
-        "alphagov/govuk_frontend_toolkit": "dev-master",
-        "ukhomeoffice/govukftbundle": "dev-master"
     }
-}
 
 
-In app/AppKernel.php:
-Add to bundle => "new UKHomeOffice\Bundle\GovUKFTBundle\GovUKFTBundle()"
+In app/AppKernel.php add the bundle
+-----------------------------------
+
+    $bundles = array(
+
+        # ...
+        new UKHomeOffice\Bundle\GovUKFTBundle\GovUKFTBundle()
+    );
 
 
-Add route resource to app/config/routing.yml (for testing purposes):
-govukft:
-    resource: "@GovUKFTBundle/Resources/config/routing.yml"
-    prefix:   /govukft
+Add route resource to app/config/routing.yml (for testing)
+----------------------------------------------------------
+
+    govukft:
+        resource: "@GovUKFTBundle/Resources/config/routing.yml"
+        prefix:   /govukft
 
 
-Add bundle to assetic bundle list in config.yml:
-# Assetic Configuration
-assetic:
-    bundles:        [ GovUKFTBundle ]
+Add the bundle extension config to app/config/config.yml 
+--------------------------------------------------------
+
+    gov_ukft:
+        enabled: true
+        title: Foo
+        theme: global
 
 
-Add the bundle config service to the imports section of
-app/config/config.yml:
-- { resource: "@GovUKFTBundle/Resources/config/services.yml" }
+
+<!--
+Add bundle to assetic bundle list in config.yml
+-----------------------------------------------
+
+    # Assetic Configuration
+    assetic:
+        bundles:        [ GovUKFTBundle ]
 
 
-Enable translations by uncommenting the following line
-in the main app/config/config.yml:
-   translator:      { fallback: "%locale%" }
+Enable translations by uncommenting in app/config/config.yml
+------------------------------------------------------------
+
+    translator:      { fallback: "%locale%" }
+-->

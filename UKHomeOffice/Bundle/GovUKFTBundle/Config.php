@@ -2,16 +2,23 @@
 
 namespace UKHomeOffice\Bundle\GovUKFTBundle;
 
+
 class Config
 {
-    public $param;
+    private $params;
 
 
-
-    public function __construct($param)
+    public function __construct($title, $theme)
     {
-        $this->param = $param;
-        //echo 'this is the config class.';
-        print_r($this);
+        $this->params = array(
+        	'title' => $title,
+        	'theme' => $theme
+        );
+    }
+
+
+    public function getParams()
+    {
+    	return $this->params;
     }
 }
