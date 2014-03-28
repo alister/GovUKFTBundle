@@ -20,7 +20,7 @@ In composer.json
         "repositories": [       
             {
                 "type": "vcs",
-                "url": "ssh://mike@ai-em.net/var/git/govukft_bundle.git"
+                "url": "https://github.com/mikejw/GovUKFTBundle.git"
             },
             {
                 "type": "composer",
