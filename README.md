@@ -83,6 +83,10 @@ Make use of the Gov UK frontend toolkit with your Symfony 2 project. See
 
 Test the theme at http://.../app_dev.php/govukft/testing
 
+**Create symlink to assets**
+         php app/console assets:install web --symlink
+
+
 
 <!--
 Enable translations by uncommenting in app/config/config.yml
