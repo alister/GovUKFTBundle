@@ -5,7 +5,17 @@ parameters:
     ft_config.class:    UKHomeOffice\Bundle\GovUKFTBundle\Config
     ft_config.title:    "Report me a lost or stolen passport"
     ft_config.theme:    global
-    
+    ft_config.def_bc:
+        - 
+          - Passports, travel and living abroad
+          - https://www.gov.uk/browse/abroad
+        -
+          - Passports
+          - https://www.gov.uk/browse/abroad/passports
+        -  
+          - Report a lost or stolen passport
+          - https://www.gov.uk/report-a-lost-or-stolen-passport
+
 
 
 services:
@@ -14,5 +24,6 @@ services:
         arguments:
           - "%ft_config.title%"
           - "%ft_config.theme%"
+          - "%ft_config.def_bc%"
 
 

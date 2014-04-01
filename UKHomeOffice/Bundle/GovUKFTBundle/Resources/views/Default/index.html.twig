@@ -3,6 +3,15 @@
 
 {% block title %}{{ ft_config['title']|trans|raw }}{% endblock %}
 
+
+{% block bc %}
+
+{% for crumb in ft_config['breadcrumb'] %}
+  <li><a href="{{ crumb[1] }}">{{ crumb[0] }}</a></li>
+{% endfor %}
+
+{% endblock %}
+
 {% block content %}
 <div class="intro">
 
@@ -24,17 +33,6 @@
 </div>
 
 <pre>
-
-
-
-
-
-
-
-
-
-
-
 </pre>
 
 {% endblock %}
