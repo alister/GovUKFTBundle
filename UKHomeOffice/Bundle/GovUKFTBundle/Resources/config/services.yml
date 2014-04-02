@@ -35,7 +35,7 @@ parameters:
             - Contact the po-lice
             - https://www.gov.uk/contact-police
     ft_config.hide_breadcrumb: false
-    ft_config.hide_sidebar: true
+    ft_config.hide_sidebar: false
 
 
 
