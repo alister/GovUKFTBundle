@@ -8,13 +8,15 @@ class Config
     private $params;
 
 
-    public function __construct($title, $theme, $breadcrumb, $sidebar=null)
+    public function __construct($title, $theme, $breadcrumb, $sidebar, $hide_breadcrumb, $hide_sidebar)
     {
         $this->params = array(
         	'title' => $title,
         	'theme' => $theme,
             'breadcrumb' => $breadcrumb,
-            'sidebar' => $sidebar
+            'sidebar' => $sidebar,
+            'hide_breadcrumb' => $hide_breadcrumb,
+            'hide_sidebar' => $hide_sidebar
         );
     }
 

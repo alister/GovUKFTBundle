@@ -5,7 +5,7 @@ parameters:
     ft_config.class:    UKHomeOffice\Bundle\GovUKFTBundle\Config
     ft_config.title:    "Report me a lost or stolen passport"
     ft_config.theme:    global
-    ft_config.def_bc:
+    ft_config.breadcrumb:
         - 
           - Passports, travel and living abroad
           - https://www.gov.uk/browse/abroad
@@ -15,6 +15,27 @@ parameters:
         -  
           - Report a lost or stolen passport
           - https://www.gov.uk/report-a-lost-or-stolen-passport
+    ft_config.sidebar:
+        Passports:
+          - 
+            - Get a passport for your child
+            - https://www.gov.uk/get-a-child-passport
+          -
+            - Get a passport urgently
+            - https://www.gov.uk/get-a-passport-urgently
+          -  
+            - Renew or replace your adult passport
+            - https://www.gov.uk/renew-adult-passport
+          -
+            - More
+            - https://www.gov.uk/browse/abroad/passports
+            - Passports
+        Elsewhere on GOV.UK:
+          -  
+            - Contact the po-lice
+            - https://www.gov.uk/contact-police
+    ft_config.hide_breadcrumb: false
+    ft_config.hide_sidebar: true
 
 
 
@@ -24,6 +45,9 @@ services:
         arguments:
           - "%ft_config.title%"
           - "%ft_config.theme%"
-          - "%ft_config.def_bc%"
+          - "%ft_config.breadcrumb%"
+          - "%ft_config.sidebar%"
+          - "%ft_config.hide_breadcrumb%"
+          - "%ft_config.hide_sidebar%"
 
 

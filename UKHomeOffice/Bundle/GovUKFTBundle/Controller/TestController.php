@@ -11,14 +11,15 @@ class TestController extends Controller
 
     public function indexAction()
     {
-        $config = array();
+        $params = array();
 
         if($this->container->has('ft_config')) {
-            $config = $this->get('ft_config');            
+            $config = $this->get('ft_config');
+            $params = $config->getParams();
         }
-    
+        
     	return $this->render('GovUKFTBundle:Default:index.html.twig',
-    		array('ft_config' => $config->getParams())
+    		array('ft_config' => $params)
         );
     }
 
