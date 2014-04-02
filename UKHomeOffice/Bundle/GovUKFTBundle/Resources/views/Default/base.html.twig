@@ -1,0 +1,125 @@
+{% block head %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
+    {% include 'GovUKFTBundle:Default:gds-css-headers.html.twig' %}
+    {% include 'GovUKFTBundle:Default:gds-analytics.html.twig' %}
+
+    <title>{{ block('title') }} - GOV.UK</title>
+
+    <meta name="description" content="Find out what you need to do if your passport has been If you need to travel urgently, you may be able to get an [emergency travel document](/emergency-travel-document) from the Embassy, High Commission or Consulate. You will have to pay a fee. or stolen and how to get a replacement">
+    {# @todo where should these files live - all remote, or as part of local assets? #}
+
+    {% stylesheets 'bundles/govukft/css/enhancement.scss' filter='sass' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+
+    <link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/jquery.prettycheckable/1.2/prettyCheckable.css" />
+    <link type="text/css" rel="stylesheet" href="https://raw.github.com/bassjobsen/typeahead.js-bootstrap-css/master/typeaheadjs.css" />
+{% endblock %}
+
+<body class="mainstream">
+    {% include 'GovUKFTBundle:Default:gds-body-header.html.twig' %}
+
+    <div id="alphaMessage">
+        <p>This website is in <strong>ALPHA</strong> and all content is subject to change.</p>
+    </div>
+
+    {% if ft_config['hide_breadcrumb'] == false %}
+
+    <div id="global-breadcrumb" class="header-context">
+        <ol role="breadcrumbs" class="group">
+            <li><a href="/">Home</a></li>
+            {{ block('bc') }}
+        </ol>
+    </div>
+
+    {% endif %}
+
+  <div id="wrapper" class="answer smart_answer directgov">
+
+
+{% block body %}
+<main id="content" role="main">
+
+    <div id="js-replaceable">
+
+        <header class="page-header group"><div>
+            <h1>{{ block('title') }}</h1>
+          </div>
+        </header>
+
+        <div class="article-container group">
+
+            {% for flashMessage in app.session.flashbag.get('notice') %}
+                <div class="flash-message">
+                    <em>Notice</em>: {{ flashMessage }}
+                </div>
+            {% endfor %}
+
+            <article role="article" class="group">
+                <div class="inner">
+                    {% block content %}{% endblock %}
+                </div>
+            </article>
+        </div>
+    </div>
+
+{% include 'GovUKFTBundle:Default:gds-meta.html.twig' %}
+
+</main>
+
+
+{%if ft_config['hide_sidebar'] == false %}
+<!-- related -->
+<div class="related-positioning">
+  <div class="related-container">
+
+    <div class="related" id="related">
+
+        {{ block('sb') }}
+            
+      <div class="inner group">
+        <a class="return-to-top" href="#content">Return to top ↑</a>
+      </div>
+
+      <div id="legacy-sources">
+        <p>This page replaces</p>
+        <ul>
+            <li class="directgov">Directgov</li>
+          <li class="businesslink">Business Link</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- end related -->
+{% endif %}
+
+</div><!-- end wrapper -->
+
+{% include 'GovUKFTBundle:Default:gds-body-footer.html.twig' %} 
+
+<div id="global-app-error" class="app-error hidden"></div>
+
+
+
+{% endblock %}
+
+<!-- javascript: -->{#% spaceless %#}
+{% block Javascript %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.min.js" type="text/javascript"></script>
+    {% javascripts %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+{#% endspaceless %#}<!-- end Javascript: -->
+
+</body>
+</html>
