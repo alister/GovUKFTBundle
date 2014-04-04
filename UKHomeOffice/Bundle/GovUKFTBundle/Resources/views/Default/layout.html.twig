@@ -1,18 +1,25 @@
 {% extends "GovUKFTBundle:Default:base.html.twig" %}
 
 
-{% block title %}{{ ft_config['title']|trans|raw }}{% endblock %}
+{% block title %}
+{% if ft_config['title'] is defined %}
+{{ ft_config['title']|trans|raw }}
+{% endif %}
+{% endblock %}
 
 
 {% block bc %}
+{% if ft_configp['breadcrumb'] is defined %}
 {% for crumb in ft_config['breadcrumb'] %}
   <li><a href="{{ crumb[1] }}">{{ crumb[0] }}</a></li>
 {% endfor %}
+{% endif %}
 {% endblock %}
 
 
 
 {% block sb %}
+{% if ft_config['sidebar'] is defined %}
 {% for section_name, section in ft_config['sidebar'] %}
 
 	<div class="inner group related-subsection">
@@ -31,8 +38,8 @@
           </ul>
           </nav>
     </div>
-
 {% endfor %}
+{% endif %}
 {% endblock %}
 
 

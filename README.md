@@ -59,7 +59,7 @@ Make use of the Gov UK frontend toolkit with your Symfony 2 project. See
         prefix:   /govukft
 
 
-**Add the bundle extension config to app/config/config.yml**
+**Add the bundle extension config to app/config/config.yml (optional)**
 
     gov_ukft:
         enabled: true

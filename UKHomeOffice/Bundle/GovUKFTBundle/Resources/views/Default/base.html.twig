@@ -16,28 +16,29 @@
         <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
 
-
     <link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/jquery.prettycheckable/1.2/prettyCheckable.css" />
     <link type="text/css" rel="stylesheet" href="https://raw.github.com/bassjobsen/typeahead.js-bootstrap-css/master/typeaheadjs.css" />
 {% endblock %}
 
+
 <body class="mainstream">
+
     {% include 'GovUKFTBundle:Default:gds-body-header.html.twig' %}
 
     <div id="alphaMessage">
         <p>This website is in <strong>ALPHA</strong> and all content is subject to change.</p>
     </div>
 
-    {% if ft_config['hide_breadcrumb'] == false %}
 
+    {% if ft_config['hide_breadcrumb'] is not defined or ft_config['hide_breadcrumb'] == false %}
     <div id="global-breadcrumb" class="header-context">
         <ol role="breadcrumbs" class="group">
             <li><a href="/">Home</a></li>
             {{ block('bc') }}
         </ol>
     </div>
-
     {% endif %}
+
 
   <div id="wrapper" class="answer smart_answer directgov">
 
@@ -73,8 +74,7 @@
 </main>
 
 
-{%if ft_config['hide_sidebar'] == false %}
-<!-- related -->
+{% if ft_config['hide_sidebar'] is not defined or ft_config['hide_sidebar'] == false %}
 <div class="related-positioning">
   <div class="related-container">
 
@@ -97,7 +97,6 @@
 
   </div>
 </div>
-<!-- end related -->
 {% endif %}
 
 </div><!-- end wrapper -->
@@ -105,21 +104,19 @@
 {% include 'GovUKFTBundle:Default:gds-body-footer.html.twig' %} 
 
 <div id="global-app-error" class="app-error hidden"></div>
-
-
-
 {% endblock %}
 
-<!-- javascript: -->{#% spaceless %#}
+
+
+
 {% block Javascript %}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-
     <script src="//cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.min.js" type="text/javascript"></script>
     {% javascripts %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
 {% endblock %}
-{#% endspaceless %#}<!-- end Javascript: -->
+
 
 </body>
 </html>
