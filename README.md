@@ -52,7 +52,7 @@ Make use of the Gov UK frontend toolkit with your Symfony 2 project. See
     );
 
 
-**Add route resource to app/config/routing.yml (for testing)**
+**Add route resource to app/config/routing.yml for testing (optional)**
 
     gov_ukft:
         resource: "@GovUKFTBundle/Resources/config/routing.yml"
