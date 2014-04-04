@@ -21,13 +21,17 @@ fieldset dd {
 form ul li {
 	list-style-type: inherit;
 	list-style-image: inherit;
-	margin: 0.5em 0 0 0;
 	padding-left: 0;
 }
 
-legend {
+form > fieldset > legend {
 	@include core-24;
 	margin-bottom: 0.5em;
+}
+
+#formFields li legend {
+	margin-top: 1.25em;
+	padding: 0;
 }
 
 #validationSummary {
@@ -91,6 +95,7 @@ input[type="text"],
 input[type="email"],
 input[type="date"],
 input[type="tel"],
+input[role="textbox"],
 textarea,
 select {
 	font-size: 16px;
@@ -165,34 +170,28 @@ select {
 	@include phase-banner;
 }
 
-.twitter-typeahead {
-	width: 50%;
-}
-
-.twitter-typeahead input, .twitter-typeahead .tt-dropdown-menu {
-	width: 100%;
-}
-
-.twitter-typeahead .tt-dropdown-menu {
+.ui-menu {
+	width: 20%;
+	list-style-type: none;
 	background-color: $white;
 	border: 1px solid $border-colour;
 	padding: 0;
-	@include border-radius(4px);
 	@include box-shadow(0 6px 12px rgba(0, 0, 0, 0.175));
 }
 
-.twitter-typeahead .tt-suggestion > p {
-	padding: 3px 5px;
-}
-
-.twitter-typeahead .tt-suggestion > p:hover,
-.tt-suggestion.tt-is-under-cursor > p {
+.ui-state-hover {
 	color: $black;
 	background-color: $panel-colour;
 }
 
+.ui-menu-item a {
+	display: block;
+	color: $black;
+	padding: 5px;
+}
+
 #formFields > li {
-	margin-top: 0.5em;
+	margin-bottom: 1.5em;
 }
 
 .choice li {
@@ -204,10 +203,14 @@ select {
 #formFields label {
 	display: block;
 	margin-bottom: 0.25em;
-	padding-top: 0.75em;
 }
 
-.step1 #formFields > li > label {
+#formFields .datePart label {
+	padding-top: 0.25em;
+	@include core-16;
+}
+
+.step1 #formFields > li > fieldset > label {
 	left: -9999px;
 	position: absolute;
 }
@@ -240,12 +243,15 @@ select {
 .datePart {
 	display: inline-block;
 	width: 14%;
-	margin: 0.5em 1em 0.5em 0;
+	margin: 0 1em 0.5em 0;
 	min-width: 1em;
 }
 
-.datePart span {
+.helpInfo {
 	color: $grey-1;
+	display: block;
+	margin-top: 0.25em;
+	@include core-16;
 }
 
 input[id$="_day"],
