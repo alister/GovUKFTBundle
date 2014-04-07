@@ -9,7 +9,7 @@
 
 
 {% block bc %}
-{% if ft_configp['breadcrumb'] is defined %}
+{% if ft_config['breadcrumb'] is defined %}
 {% for crumb in ft_config['breadcrumb'] %}
   <li><a href="{{ crumb[1] }}">{{ crumb[0] }}</a></li>
 {% endfor %}
